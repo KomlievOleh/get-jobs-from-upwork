@@ -1,0 +1,71 @@
+# ===== NODE =====
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log
+
+# ===== REACT (Create React App) =====
+build/
+.cache/
+.eslintcache
+.env
+.env.*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ===== NEXT.JS (якщо раптом використовується) =====
+.next/
+out/
+
+# ===== VITE (якщо використовується) =====
+dist/
+
+# ===== DOCKER =====
+docker-compose.override.yml
+*.container
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# Docker volumes
+volumes/
+tmp/
+
+# ===== OS-specific =====
+.DS_Store
+Thumbs.db
+
+# ===== WORK DIR =====
+chrome-upwork-profile/
+
+# ===== VS Code =====
+.vscode/
+.history/
+
+# ===== Logs =====
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ===== Testing =====
+coverage/
+*.lcov
+
+# ===== Miscellaneous =====
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.swp
+*.swo
+*.bak
+*.tmp
