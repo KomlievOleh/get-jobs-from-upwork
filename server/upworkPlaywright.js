@@ -1,4 +1,5 @@
 import { chromium } from "playwright";
+import fs from "fs";
 
 function buildUpworkUrl(filters) {
     const params = new URLSearchParams();
@@ -47,12 +48,17 @@ function buildUpworkUrl(filters) {
 }
 
 export async function getUpworkJobs(filters = {}) {
+    const profileDir = "./chrome-upwork-profile";
+    fs.mkdirSync(profileDir, { recursive: true });
+
     const context = await chromium.launchPersistentContext(
-        "./chrome-upwork-profile",
+        profileDir,
         {
             channel: "chrome",
             headless: false,
-            args: ["--disable-blink-features=AutomationControlled"],
+            args: [
+                "--disable-blink-features=AutomationControlled",
+            ],
         }
     );
 
